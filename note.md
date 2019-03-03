@@ -26,3 +26,7 @@
 - Choices of the `select` input control sent by the server via `updateSelectInput
 - **C&P**
 
+<!--- -->
+- Make _Refereces_ collapsable under Bootstrap 3.3.7
+- **C&P**
+
