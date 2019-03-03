@@ -22,3 +22,7 @@
 - Filter by `vore` and add `selectInput` control
 - **C&P**
 
+<!--- -->
+- Choices of the `select` input control sent by the server via `updateSelectInput
+- **C&P**
+
