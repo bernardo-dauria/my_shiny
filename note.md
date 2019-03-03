@@ -8,3 +8,9 @@
 <!--- -->
 - change the title
 - **C&P**
+
+<!--- -->
+- create the `references.md` markdown file
+- include it in the main page
+- **C&P**
+
