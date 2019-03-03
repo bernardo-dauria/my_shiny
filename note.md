@@ -18,3 +18,7 @@
 - Add some plots and a h3
 - **C&P**
 
+<!--- -->
+- Filter by `vore` and add `selectInput` control
+- **C&P**
+
