@@ -6,6 +6,7 @@
 #
 #    http://shiny.rstudio.com/
 #
+# Additional Bootstrap themes at [Bootswatch](http://bootswatch.com/)
 
 library(shiny)
 library(tidyverse)
@@ -14,32 +15,26 @@ list_choices <-  unique(msleep$vore)[!is.na(unique(msleep$vore))]
 names(list_choices) <- paste(unique(msleep$vore)[!is.na(unique(msleep$vore))],"vore",sep="")
 
 # Define UI for application that draws a histogram
-ui <- fluidPage( 
-   
-   # Application title
-   titlePanel("This is a new Shiny app"),
-   
-   p(tags$button(class="btn btn-default", 
-       `data-toggle`="collapse", 
-       `data-target`="#collapseExample",
-       "References")),
-   
-   div(class="collapse", id="collapseExample",
-       div(class="card card-body",
-           includeMarkdown("references.md")
-       )),
-   
-   sidebarLayout(
-     sidebarPanel(
-       selectInput("select", label = h3("Plot by type of alimentation"), 
-                   choices = character(0),
-                   selected = 1)
-     ),
-     mainPanel(
-       plotOutput(outputId = "plot")
+ui <- navbarPage("Shiny app",
+
+  tabPanel("msleep",
+    fluidPage( 
+     sidebarLayout(# position = "right",
+       sidebarPanel(
+         selectInput("select", label = h3("Plot by type of alimentation"), 
+                     choices = character(0),
+                     selected = 1)
+       ),
+       mainPanel(
+         plotOutput(outputId = "plot")
+       )
      )
-   )
-)
+  ) # fluidPage
+  ), #  titlePanel
+  tabPanel("References",
+           includeMarkdown("references.md")
+  ) #  titlePanel
+) # navbarPage
 
 col_scale <- scale_colour_discrete(limits = unique(msleep$vore))
 

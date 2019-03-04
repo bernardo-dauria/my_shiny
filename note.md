@@ -7,7 +7,7 @@
 
 <!--- -->
 - change the title
-- **C&P**
+-- **C&P**
 
 <!--- -->
 - create the `references.md` markdown file
@@ -16,21 +16,25 @@
 
 <!--- -->
 - Add some plots and a h3
-- **C&P**
+-- **C&P**
 
 <!--- -->
 - Filter by `vore` and add `selectInput` control
-- **C&P**
+-- **C&P**
 
 <!--- -->
 - Choices of the `select` input control sent by the server via `updateSelectInput
-- **C&P**
+-- **C&P**
 
 <!--- -->
 - Make _Refereces_ collapsable under Bootstrap 3.3.7
-- **C&P**
+-- **C&P**
 
 <!--- -->
 - Add sidebarLayout
-- **C&P**
+-- **C&P**
+
+<!--- -->
+- Add navbarPage
+-- **C&P**
 
