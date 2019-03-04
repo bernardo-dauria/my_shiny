@@ -38,3 +38,18 @@
 - Add navbarPage
 -- **C&P**
 
+<!--- -->
+## Todo
+- Add tabPanel with generator of histogram
+- isolate
+- refactor helper.r global.r and multiple components
+- component (Tabsets)
+- component (Interactive plots)
+- component (Reactivity - An overview)
+- component (Use reactive expressions)
+- create a pdf report
+
+<!--- -->
+## Exercise
+- Load file and show variables and plot and summary
+
