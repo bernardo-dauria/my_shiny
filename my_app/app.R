@@ -29,12 +29,16 @@ ui <- fluidPage(
            includeMarkdown("references.md")
        )),
    
-   selectInput("select", label = h3("Plot by type of alimentation"), 
-               choices = character(0),
-               selected = 1),
-   
-   plotOutput(outputId = "plot")
-   
+   sidebarLayout(
+     sidebarPanel(
+       selectInput("select", label = h3("Plot by type of alimentation"), 
+                   choices = character(0),
+                   selected = 1)
+     ),
+     mainPanel(
+       plotOutput(outputId = "plot")
+     )
+   )
 )
 
 col_scale <- scale_colour_discrete(limits = unique(msleep$vore))

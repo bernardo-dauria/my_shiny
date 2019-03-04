@@ -30,3 +30,7 @@
 - Make _Refereces_ collapsable under Bootstrap 3.3.7
 - **C&P**
 
+<!--- -->
+- Add sidebarLayout
+- **C&P**
+
