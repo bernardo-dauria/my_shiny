@@ -86,8 +86,9 @@ server <- function(input, output, session) {
   observe(if(input$auto_bins) disable("n_bins") else enable("n_bins") )
   
   output$pulpo <- renderPlot(
-      if(input$auto_bins) hist(cmd()) 
-      else hist(cmd(), breaks=input$n_bins)
+      hist(cmd(), main="Random Generation", 
+           breaks = if(!input$auto_bins) {input$n_bins} else {"Sturges"}
+      )
     );
 
 }
