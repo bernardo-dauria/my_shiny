@@ -56,11 +56,18 @@
 -- **C&P**
 
 <!--- -->
-## Todo
-- isolate
-- refactor helper.r global.r and multiple components
-- component (Use reactive expressions)
-- create a pdf report
+- Make interactive the plot in `msleep` component 
+-- **C&P**
+- Improve interactivity by using `nearPoints` and `renderTable` 
+-- **C&P**
+
+<!--- -->
+- Add the `Go` button to the  `histogram` component
+-- **C&P**
+
+<!--- -->
+- Create a pdf report
+-- **C&P**
 
 <!--- -->
 ## Exercise
