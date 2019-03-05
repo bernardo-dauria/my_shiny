@@ -39,6 +39,12 @@
 -- **C&P**
 
 <!--- -->
+- Add `histogram`component
+- Use `selectInput` for `dist` and reactive function `cmd()`
+- Use `selectInput`s for `n_sample` and `n_bins`
+- **C&P**
+
+<!--- -->
 ## Todo
 - Add tabPanel with generator of histogram
 - isolate
