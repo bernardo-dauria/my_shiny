@@ -59,7 +59,6 @@
 ## Todo
 - isolate
 - refactor helper.r global.r and multiple components
-- component (Reactivity - An overview)
 - component (Use reactive expressions)
 - create a pdf report
 
