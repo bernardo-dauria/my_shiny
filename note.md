@@ -49,7 +49,6 @@
 
 <!--- -->
 ## Todo
-- Add tabPanel with generator of histogram
 - isolate
 - refactor helper.r global.r and multiple components
 - component (Tabsets)

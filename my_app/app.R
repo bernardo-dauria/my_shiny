@@ -51,7 +51,11 @@ ui <- navbarPage("Shiny app",
            )
          ), # sidebarPanel
          mainPanel(
-           plotOutput(outputId = "pulpo")
+           tabsetPanel(type = "tabs",
+                       tabPanel("Plot", plotOutput("histPlot")),
+                       tabPanel("Summary", verbatimTextOutput("histSummary")),
+                       tabPanel("Table", tableOutput("histTable"))
+           )
          ) # mainPanel
        ) # sidebarLayout
   ), #  tabPanel
@@ -81,16 +85,20 @@ server <- function(input, output, session) {
     }
   });
   
-  cmd = reactive(eval(parse(text=paste(input$dist,"(",input$n_sample,")",sep=""))));
+  samples <- reactive({
+      dist <- eval(parse(text=paste(input$dist)))
+      dist(input$n_sample)
+    })
   
-  observe(if(input$auto_bins) disable("n_bins") else enable("n_bins") )
+  observe(if(input$auto_bins) disable("n_bins") else enable("n_bins"))
   
-  output$pulpo <- renderPlot(
-      hist(cmd(), main="Random Generation", 
-           breaks = if(!input$auto_bins) {input$n_bins} else {"Sturges"}
-      )
-    );
-
+  output$histPlot <- renderPlot(
+      hist(samples(), main="Random Generation", 
+           breaks = if(!input$auto_bins) {input$n_bins} else {"Sturges"})
+  )
+  output$histSummary <- renderPrint(summary(samples()))
+  output$histTable <- renderTable(samples())
+  
 }
 
 # Run the application 
