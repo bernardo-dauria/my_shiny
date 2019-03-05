@@ -46,12 +46,17 @@
 - Add `shinyjs::useShinyjs()` 
 - Activate and deactivate `n_bins` by `checkboxInput` `auto-bins`
 -- **C&P**
+- use `tabsetPanel` to show Plot/Summary/Table
+-- **C&P**
+
+<!--- -->
+- Make interactive the plot in `msleep` component 
+-- **C&P**
 
 <!--- -->
 ## Todo
 - isolate
 - refactor helper.r global.r and multiple components
-- component (Tabsets)
 - component (Interactive plots)
 - component (Reactivity - An overview)
 - component (Use reactive expressions)

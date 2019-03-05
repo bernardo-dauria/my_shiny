@@ -26,7 +26,8 @@ ui <- navbarPage("Shiny app",
                        selected = 1)
          ), # sidebarPanel
          mainPanel(
-           plotOutput(outputId = "plot")
+           plotOutput(outputId = "plot", click = "plot_click"),
+           verbatimTextOutput("info")
          ) # mainPanel
        ) # sidebarLayout
     ) # fluidPage
@@ -84,6 +85,9 @@ server <- function(input, output, session) {
         geom_point()
     }
   });
+  output$info <- renderText({
+    paste0("x=", input$plot_click$x, "\ny=", input$plot_click$y)
+  })
   
   samples <- reactive({
       dist <- eval(parse(text=paste(input$dist)))
