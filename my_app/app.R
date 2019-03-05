@@ -27,7 +27,7 @@ ui <- navbarPage("Shiny app",
          ), # sidebarPanel
          mainPanel(
            plotOutput(outputId = "plot", click = "plot_click"),
-           verbatimTextOutput("info")
+           tableOutput("info")
          ) # mainPanel
        ) # sidebarLayout
     ) # fluidPage
@@ -85,8 +85,13 @@ server <- function(input, output, session) {
         geom_point()
     }
   });
-  output$info <- renderText({
-    paste0("x=", input$plot_click$x, "\ny=", input$plot_click$y)
+  
+  output$info <- renderTable({
+    nearPoints(msleep 
+               %>% filter(vore == input$select) 
+               %>% select(name, bodywt,  sleep_total, sleep_rem, sleep_cycle ), 
+               input$plot_click, threshold = 10, maxpoints = 1,
+               addDist = TRUE)
   })
   
   samples <- reactive({

@@ -52,12 +52,13 @@
 <!--- -->
 - Make interactive the plot in `msleep` component 
 -- **C&P**
+- Improve interactivity by using `nearPoints` and `renderTable` 
+-- **C&P**
 
 <!--- -->
 ## Todo
 - isolate
 - refactor helper.r global.r and multiple components
-- component (Interactive plots)
 - component (Reactivity - An overview)
 - component (Use reactive expressions)
 - create a pdf report
