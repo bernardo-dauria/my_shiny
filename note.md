@@ -12,7 +12,7 @@
 <!--- -->
 - create the `references.md` markdown file
 - include it in the main page
-- **C&P**
+-- **C&P**
 
 <!--- -->
 - Add some plots and a h3
@@ -39,10 +39,13 @@
 -- **C&P**
 
 <!--- -->
-- Add `histogram`component
+- Add `histogram` component
 - Use `selectInput` for `dist` and reactive function `cmd()`
 - Use `selectInput`s for `n_sample` and `n_bins`
-- **C&P**
+-- **C&P**
+- Add `shinyjs::useShinyjs()` 
+- Activate and deactivate `n_bins` by `checkboxInput` `auto-bins`
+-- **C&P**
 
 <!--- -->
 ## Todo
