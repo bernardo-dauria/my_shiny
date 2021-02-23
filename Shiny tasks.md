@@ -58,12 +58,6 @@
 - Make interactive the plot in `msleep` component 
 &mdash; [**C&P**](https://github.com/bernardo-dauria/my_shiny/commit/6e7537397605c713709446cdeb851dcbf9f255e2)
 - Improve interactivity by using `nearPoints` and `renderTable` 
-&mdash; [**C&P**](https://github.com/bernardo-dauria/my_shiny/commit/6e7537397605c713709446cdeb851dcbf9f255e2)
-
-<!--- -->
-- Make interactive the plot in `msleep` component 
-&mdash; [**C&P**](https://github.com/bernardo-dauria/my_shiny/commit/6e7537397605c713709446cdeb851dcbf9f255e2)
-- Improve interactivity by using `nearPoints` and `renderTable` 
 &mdash; [**C&P**](https://github.com/bernardo-dauria/my_shiny/commit/2a1c88b8a2d0d41e44891ff53584610829f09efd)
 
 <!--- -->
